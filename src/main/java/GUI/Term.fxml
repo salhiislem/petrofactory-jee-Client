@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.TermController">
+   <children>
+      <Label layoutX="166.0" layoutY="14.0" prefHeight="59.0" prefWidth="396.0" text="Use Terms">
+         <font>
+            <Font size="41.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="txt" editable="false" layoutX="14.0" layoutY="83.0" maxWidth="565.0" minWidth="565.0" prefHeight="235.0" prefWidth="565.0" />
+      <CheckBox fx:id="terms" layoutX="147.0" layoutY="328.0" prefHeight="21.0" prefWidth="406.0" text="I have read and agree to the terms and conditions" />
+      <Button fx:id="signupbtn" layoutX="211.0" layoutY="356.0" onAction="#signUp" prefHeight="26.0" prefWidth="171.0" style="-fx-background-color: B52F2A; -fx-background-radius: 2cm;" text="Save agreement" textFill="#e4dfdf">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

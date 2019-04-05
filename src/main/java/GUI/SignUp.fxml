@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="484.0" prefWidth="822.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.SignUpController">
+   <children>
+      <ImageView fitHeight="566.0" fitWidth="859.0" layoutY="-10.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/background.jpg" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="137.0" layoutY="21.0" prefHeight="456.0" prefWidth="698.0" style="-fx-background-color: white; -fx-background-radius: 2cm;">
+         <children>
+            <JFXTextField fx:id="email" layoutX="414.0" layoutY="196.0" prefHeight="39.0" prefWidth="222.0" promptText="Email" style="-fx-background-radius: 2cm;" />
+            <JFXTextField fx:id="lastname" layoutX="121.0" layoutY="140.0" prefHeight="39.0" prefWidth="222.0" promptText="lastname" style="-fx-background-radius: 2cm;" />
+            <JFXTextField fx:id="username" layoutX="414.0" layoutY="131.0" prefHeight="39.0" prefWidth="222.0" promptText="username" style="-fx-background-radius: 2cm;" />
+            <JFXTextField fx:id="firstname" layoutX="121.0" layoutY="76.0" prefHeight="39.0" prefWidth="222.0" promptText="firstname" style="-fx-background-radius: 2cm;" />
+            <JFXPasswordField fx:id="password" layoutX="414.0" layoutY="250.0" prefHeight="39.0" prefWidth="222.0" promptText="password" style="-fx-background-radius: 2cm;" />
+            <JFXPasswordField fx:id="repeat_password" layoutX="414.0" layoutY="313.0" prefHeight="39.0" prefWidth="222.0" promptText="repeat password" style="-fx-background-radius: 2cm;" />
+            <JFXDatePicker fx:id="birthday" layoutX="121.0" layoutY="200.0" prefHeight="31.0" prefWidth="222.0" promptText="birthday" style="-fx-background-radius: 2cm;" />
+            <JFXCheckBox fx:id="terms" layoutX="293.0" layoutY="406.0" text="Terms &amp; Condition" textFill="#2f2f2f">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font>
+            </JFXCheckBox>
+            <Label layoutX="167.0" layoutY="21.0" prefHeight="48.0" prefWidth="201.0" text="Get Started">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="erreur" layoutX="37.0" layoutY="379.0" prefHeight="48.0" prefWidth="360.0" />
+            <JFXTextField fx:id="numTel" layoutX="414.0" layoutY="76.0" prefHeight="39.0" prefWidth="222.0" promptText="phone number" style="-fx-background-radius: 2cm;" />
+            <JFXTextField fx:id="address" layoutX="118.0" layoutY="313.0" prefHeight="39.0" prefWidth="228.0" promptText="address" style="-fx-background-radius: 2cm;" />
+            <JFXCheckBox fx:id="female" layoutX="132.0" layoutY="270.0" mnemonicParsing="false" text="Female" textFill="#2f2f2f">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXCheckBox>
+            <JFXCheckBox fx:id="male" layoutX="243.0" layoutY="270.0" mnemonicParsing="false" prefHeight="21.0" prefWidth="76.0" text="Male" textFill="#2f2f2f">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </JFXCheckBox>
+         </children>
+      </AnchorPane>
+      <JFXButton fx:id="reset" layoutX="228.0" layoutY="488.0" mnemonicParsing="false" onAction="#ResetAll" prefHeight="39.0" prefWidth="179.0" style="-fx-background-radius: 2cm; -fx-background-color: #1136B5;" text="Reset All" textFill="#fffdfd">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton fx:id="ajouter" layoutX="559.0" layoutY="487.0" mnemonicParsing="false" onAction="#ajouter_utilisateur" prefHeight="39.0" prefWidth="167.0" style="-fx-background-radius: 2cm; -fx-background-color: B52F2A;" text="Sign up" textFill="#fffdfd">
+         <font>
+            <Font name="Bodoni MT" size="23.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
