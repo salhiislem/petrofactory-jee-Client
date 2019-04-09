@@ -25,8 +25,8 @@ public class CustomerService {
 	//User user=proxy.findByMail("islem.salhi@esprit.tn");
 		//System.out.println(user.getFirstname());
 		//proxy.deleteUser(1);
-		List<Customer> users=proxy.filterCustomerByName("hmidi");
-		for (Customer us: users){System.out.println(us.getFirstname());}
+		//List<Customer> users=proxy.filterCustomerByName("hmidi");
+		//for (Customer us: users){System.out.println(us.getFirstname());}
 		//User us=proxy.loginUser("username", "123");
 		//System.out.println(us.getFirstname());
 		//User u1=new User(4);

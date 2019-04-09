@@ -60,7 +60,7 @@ public class ForgotPassController {
 	        	UserServiceDelegate UD=new UserServiceDelegate();
 	        	User u=UD.findByMail(mailid.getText());
 	        	 System.out.println(y);
-	        	String mesg="votre code est : " + y;
+	        	String mesg="Your code : " + y;
 		
 		Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 

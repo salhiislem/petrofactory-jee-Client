@@ -15,6 +15,7 @@ import javafx.event.ActionEvent;
 
 import javafx.scene.layout.AnchorPane;
 import javafx.util.Duration;
+import persistence.User;
 
 public class UIController implements Initializable{
 	@FXML
@@ -40,6 +41,7 @@ public class UIController implements Initializable{
 
     public void initialize(URL url, ResourceBundle rb) {
         rootP = holderPane;
+       System.out.println(User.getConnectedUser().getUsername()); 
     }
     public static void setNode(Node node) {
         rootP.getChildren().clear();
@@ -83,7 +85,7 @@ public class UIController implements Initializable{
 	// Event Listener on Button[#btnUsers].onAction
 	@FXML
 	public void switchUsers(ActionEvent event) throws IOException {
-		 Users = FXMLLoader.load(getClass().getResource("UsersList.fxml"));
+		 Users = FXMLLoader.load(getClass().getResource("UsersSpace.fxml"));
 	        setNode(Users);	}
 	// Event Listener on Button[#btnExit].onAction
 	@FXML

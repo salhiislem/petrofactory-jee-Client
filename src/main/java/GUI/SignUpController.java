@@ -92,7 +92,7 @@ public class SignUpController {
 				user.setGender(Gender.MALE);
 			}
 			us.createUser(user);
-			Parent root = FXMLLoader.load(getClass().getResource("SignUp.fxml"));
+			Parent root = FXMLLoader.load(getClass().getResource("Log.fxml"));
 			Scene scene = new Scene(root);
 	          Node node =(Node)event.getSource();
 	             stage = (Stage)node.getScene().getWindow();

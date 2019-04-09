@@ -24,7 +24,7 @@
     <children>
                  <HBox layoutX="1.0" layoutY="2.0" prefHeight="64.0" prefWidth="1106.0" styleClass="dash">
          <children>
-            <Label prefHeight="39.0" prefWidth="786.0" text="Users List" textFill="#6c6c6c">
+            <Label prefHeight="39.0" prefWidth="786.0" text="Employees List" textFill="#6c6c6c">
                <font>
                   <Font name="System Bold" size="27.0" />
                </font>
@@ -64,7 +64,7 @@
           <TableColumn fx:id="address" minWidth="9.0" prefWidth="111.0" style="-fx-background-color: #7F8A88;" text="Address" />
           <TableColumn fx:id="tel" prefWidth="119.0" style="-fx-background-color: #7F8A88;" text="phone number" />
             <TableColumn fx:id="salary" minWidth="0.0" prefWidth="108.0" style="-fx-background-color: #7F8A88;" text="Salary" />
-          <TableColumn fx:id="Contrat" minWidth="0.0" prefWidth="116.0" style="-fx-background-color: #7F8A88;" text="Contract type" />
+          <TableColumn fx:id="Contrat" minWidth="0.0" onEditCommit="#EditTypeContract" prefWidth="116.0" style="-fx-background-color: #7F8A88;" text="Contract type" />
             <TableColumn fx:id="start" prefWidth="95.0" style="-fx-background-color: #7F8A88;" text="Start date" />
             <TableColumn fx:id="end" prefWidth="92.0" style="-fx-background-color: #7F8A88;" text="End date" />
         </columns>

@@ -173,7 +173,7 @@ public class CustomersListController implements Initializable {
 		}
 		else if(!filterNom.getText().equals("")){
 			List<Customer> l=UD.filterUsersByName(filterNom.getText());
-			System.out.println(filterNom.getText());
+			//System.out.println(filterNom.getText());
 			loadDemande(l);
 		}}
 	@Override

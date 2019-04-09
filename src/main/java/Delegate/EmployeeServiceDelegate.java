@@ -29,4 +29,7 @@ private static final String jndiName ="petroFactory-ejb/EmployeeService!services
 	{
 		return getProxy().filterEmployeesByName(name);
 	}
+	public static void updateEmployee(Employee emp){
+		getProxy().updateEmployee(emp);
+	}
 }

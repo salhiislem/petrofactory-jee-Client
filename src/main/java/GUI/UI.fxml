@@ -17,7 +17,7 @@
         <URL value="@Stylesheet.css" />
     </stylesheets>
    <children>
-      <VBox layoutY="37.0" prefHeight="764.0" prefWidth="216.0" styleClass="sidebar">
+      <VBox layoutY="41.0" prefHeight="760.0" prefWidth="216.0" styleClass="sidebar">
          <children>
             <Pane prefHeight="64.0" prefWidth="216.0" style="-fx-border-width:0 0 1px 0;-fx-border-color:#a1aec4;">
                <children>
@@ -192,7 +192,7 @@
          </children></VBox>
          
 
-      <HBox prefHeight="37.0" prefWidth="1322.0" style="-fx-background-color: #25a89f;">
+      <HBox prefHeight="42.0" prefWidth="1322.0" style="-fx-background-color: #25a89f;">
          <children>
             <Label alignment="CENTER" prefHeight="38.0" prefWidth="426.0" text="Dashboard" textAlignment="CENTER" textFill="WHITE">
                <font>
@@ -202,7 +202,7 @@
     
      
         
-        <AnchorPane fx:id="holderPane" layoutX="217.0" layoutY="37.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="764.0" prefWidth="1106.0" style="-fx-background-color:#f4f4f4;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
+        <AnchorPane fx:id="holderPane" layoutX="217.0" layoutY="41.0" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="760.0" prefWidth="1106.0" style="-fx-background-color:#f4f4f4;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1">
          </AnchorPane>
     
       

@@ -17,7 +17,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="holderPane" prefHeight="801.0" prefWidth="1088.0" style="-fx-background-color: silver;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.UsersListController">
+<AnchorPane fx:id="holderPane" prefHeight="801.0" prefWidth="1088.0" style="-fx-background-color: silver;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.EmployeeListController">
     <stylesheets>
         <URL value="@Stylesheet.css" />
     </stylesheets>
@@ -43,7 +43,7 @@
                   </ImageView>
                   <MenuButton mnemonicParsing="false" style="-fx-background-color: transparent;" text=" Admin">
                     <items>
-                      <MenuItem fx:id="logout" mnemonicParsing="false" onAction="#Logout" styleClass="menuItem" text="Logout" />
+                      <MenuItem mnemonicParsing="false" styleClass="menuItem" text="Logout" />
                     </items>
                      <font>
                         <Font name="Ebrima Bold" size="16.0" />
@@ -67,10 +67,10 @@
             <TableColumn fx:id="Acc" minWidth="0.0" prefWidth="125.0" style="-fx-background-color: #7F8A88;" text="AccountState" />
         </columns>
       </TableView>
-      <TextField fx:id="filterNom" layoutX="129.0" layoutY="81.0" prefHeight="31.0" prefWidth="182.0" style="-fx-background-radius: 2cm;" />
-      <Label layoutX="11.0" layoutY="85.0" text="Search By name" />
-      <Label layoutX="454.0" layoutY="85.0" text="Filter By Role" />
-      <ComboBox fx:id="filterRole" layoutX="567.0" layoutY="81.0" prefHeight="25.0" prefWidth="98.0" />
+      <TextField fx:id="filterNom" layoutX="118.0" layoutY="81.0" prefHeight="31.0" prefWidth="182.0" style="-fx-background-radius: 2cm;" />
+      <Label layoutX="11.0" layoutY="85.0" text="Filter By name" />
+      <Label layoutX="328.0" layoutY="85.0" text="Filter By Role" />
+      <ComboBox fx:id="filterRole" layoutX="444.0" layoutY="81.0" prefHeight="25.0" prefWidth="98.0" />
       <Button fx:id="export" layoutX="942.0" layoutY="81.0" mnemonicParsing="false" onAction="#exportAction" text="Export en PDF" />
       <HBox alignment="CENTER_LEFT" layoutX="222.0" layoutY="115.0" prefHeight="92.0" prefWidth="630.0" spacing="50.0">
          <children>
@@ -116,7 +116,20 @@
                   </Label>
                </children>
             </VBox>
-            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" />
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0">
+               <children>
+                  <Label fx:id="managersnb" text="780" textFill="#de0000">
+                     <font>
+                        <Font name="System Bold" size="26.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="joobreqnb" onMouseClicked="#managers_affiche" prefHeight="28.0" prefWidth="141.0" text="Job Requests" textFill="#e7e5e5">
+                     <font>
+                        <Font name="System Bold" size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
          </children>
       </HBox>
       <Button fx:id="delete" layoutX="820.0" layoutY="638.0" mnemonicParsing="false" onMouseClicked="#deleteUser" prefHeight="31.0" prefWidth="95.0" style="-fx-background-color: B52F2A; -fx-background-radius: 2cm;" text="Delete" textFill="WHITE">
@@ -129,12 +142,7 @@
             <Font name="System Bold" size="20.0" />
          </font>
       </Label>
-      <Button fx:id="filter" layoutX="687.0" layoutY="77.0" mnemonicParsing="false" onMouseClicked="#filter" prefHeight="31.0" prefWidth="75.0" style="-fx-background-color: B52F2A; -fx-background-radius: 2cm;" text="Filter" textFill="WHITE">
-         <font>
-            <Font name="System Bold Italic" size="16.0" />
-         </font>
-      </Button>
-      <Button fx:id="search" layoutX="333.0" layoutY="79.0" mnemonicParsing="false" onMouseClicked="#rechercheNom" prefHeight="31.0" prefWidth="75.0" style="-fx-background-color: B52F2A; -fx-background-radius: 2cm;" text="Search" textFill="WHITE">
+      <Button fx:id="filter" layoutX="561.0" layoutY="77.0" mnemonicParsing="false" onMouseClicked="#filter" prefHeight="31.0" prefWidth="75.0" style="-fx-background-color: B52F2A; -fx-background-radius: 2cm;" text="Filter" textFill="WHITE">
          <font>
             <Font name="System Bold Italic" size="16.0" />
          </font>
