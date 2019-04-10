@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="627.0" prefWidth="953.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="esprit.petrofactory.interfaces.FXReportController">
+   <children>
+      <TextField fx:id="tf_type" layoutX="145.0" layoutY="174.0" prefHeight="26.0" prefWidth="118.0" />
+      <TextField fx:id="tf_ia" layoutX="145.0" layoutY="234.0" prefHeight="26.0" prefWidth="118.0" />
+      <TextField fx:id="tf_fa" layoutX="145.0" layoutY="287.0" prefHeight="26.0" prefWidth="118.0" />
+      <TextField fx:id="tf_gain" layoutX="145.0" layoutY="346.0" prefHeight="26.0" prefWidth="118.0" />
+      <Button fx:id="btn_add" layoutX="194.0" layoutY="416.0" mnemonicParsing="false" onMouseClicked="#add_rep" prefHeight="39.0" prefWidth="70.0" text="Add">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+      <TableView fx:id="tab_rep" layoutX="334.0" layoutY="97.0" prefHeight="274.0" prefWidth="464.0">
+        <columns>
+          <TableColumn fx:id="id_type" onEditCommit="#changeTypeCellEvent" prefWidth="75.0" text="Type" />
+          <TableColumn fx:id="id_ia" prefWidth="95.199951171875" text="Initial amount" />
+            <TableColumn fx:id="id_fa" prefWidth="101.60003662109375" text="Final amount" />
+            <TableColumn fx:id="id_gain" prefWidth="81.5999755859375" text="Gain" />
+            <TableColumn fx:id="id_date" prefWidth="111.199951171875" text="Date" />
+        </columns>
+      </TableView>
+      <Button fx:id="btn_del" layoutX="718.0" layoutY="416.0" mnemonicParsing="false" onMouseClicked="#del_rep" prefHeight="26.0" prefWidth="90.0" text="Delete">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+      <Label layoutX="33.0" layoutY="111.0" prefHeight="26.0" prefWidth="70.0" text="Date" />
+      <Label layoutX="26.0" layoutY="174.0" prefHeight="26.0" prefWidth="70.0" text="Type" />
+      <Label layoutX="26.0" layoutY="234.0" prefHeight="26.0" prefWidth="118.0" text="Initial amount" />
+      <Label layoutX="24.0" layoutY="287.0" prefHeight="26.0" prefWidth="108.0" text="Final amount" />
+      <Label layoutX="26.0" layoutY="346.0" prefHeight="26.0" prefWidth="70.0" text="Gain" />
+      <Button fx:id="btn_rtr" layoutX="844.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#Retour" prefHeight="34.0" prefWidth="82.0" text="Retour">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <DatePicker fx:id="tf_date" layoutX="145.0" layoutY="111.0" prefHeight="26.0" prefWidth="118.0" />
+      <Button fx:id="btn_sort" layoutX="549.0" layoutY="416.0" mnemonicParsing="false" onMouseClicked="#SortedByDate" prefHeight="46.0" prefWidth="82.0" text="Sorted">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="btn_s" layoutX="737.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#Search" prefHeight="34.0" prefWidth="82.0" text="Search">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <TextField fx:id="tf_s" layoutX="536.0" layoutY="19.0" prefHeight="26.0" prefWidth="176.0" />
+      <ImageView fitHeight="155.0" fitWidth="176.0" layoutX="8.0" layoutY="-32.0">
+         <image>
+            <Image url="@images/petrofact.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
