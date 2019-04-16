@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="holderPane" prefHeight="682.0" prefWidth="1080.0" stylesheets="@Stylesheet.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.JobRequestsListController">
+	
+	    <children>
+      <ListView fx:id="ListView_Produits" layoutY="7.0" prefHeight="575.0" prefWidth="1080.0" stylesheets="@Stylesheet.css" />
+      <Button fx:id="ajuster" layoutX="802.0" layoutY="619.0" mnemonicParsing="false" onMouseClicked="#adjust" prefHeight="31.0" prefWidth="215.0" text="adjust requests to offer" underline="true">
+         <font>
+            <Font name="System Bold Italic" size="17.0" />
+         </font>
+      </Button>
+      <JFXRadioButton fx:id="experience" layoutX="461.0" layoutY="605.0" text="minimum of year experience">
+         <toggleGroup>
+            <ToggleGroup fx:id="requests" />
+         </toggleGroup>
+      </JFXRadioButton>
+      <JFXRadioButton fx:id="skil" layoutX="461.0" layoutY="636.0" text="Number of approved skills">
+         <toggleGroup>
+            <ToggleGroup fx:id="requests" />
+         </toggleGroup>
+      </JFXRadioButton>
+      <Label layoutX="24.0" layoutY="607.0" prefHeight="38.0" prefWidth="428.0" text="Check for requests accordance by:">
+         <font>
+            <Font name="System Bold Italic" size="23.0" />
+         </font>
+      </Label>
+
+   </children>
+   
+</AnchorPane>

@@ -8,6 +8,7 @@ import javax.naming.NamingException;
 
 import persistence.Employee;
 import services.EmployeeServiceRemote;
+import services.SkillsServiceRemote;
 import utils.Role;
 
 
@@ -30,12 +31,13 @@ public class EmployeeService {
 		//List<Employee> users=proxy.findAllEmployees();
 		//for (Employee us: users){System.out.println(us.getEmployeeRole());}
 		
-		List<Employee> users=proxy.filterEmployeesByNameANDrole("outay", Role.Manager);
-		for (Employee us: users)
-		{System.out.println(us.getFirstname());}
+		//List<Employee> users=proxy.filterEmployeesByNameANDrole("outay", Role.Manager);
+		//for (Employee us: users)
+		//{System.out.println(us.getFirstname());}
 		//User us=proxy.loginUser("username", "123");
 		//System.out.println(us.getFirstname());
 		//User u1=new User(4);
 		//boolean b=proxy.changePwd(u1, "123", "1234");
-		//System.out.println(b);
+		//System.out.println(b);4
+		
 	}}

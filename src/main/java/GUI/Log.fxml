@@ -27,12 +27,15 @@
       </ImageView>
       <Pane layoutX="617.0" layoutY="99.0" opacity="0.83" prefHeight="378.0" prefWidth="323.0" style="-fx-background-color: white; -fx-background-radius: 2cm;">
          <children>
-            <JFXButton fx:id="btn_login" layoutX="76.0" layoutY="199.0" mnemonicParsing="false" onMouseClicked="#btn_login_signal" opacity="0.86" prefHeight="31.0" prefWidth="144.0" style="-fx-background-color: B52F2A; -fx-background-radius: 5cm;" text="Log in" textFill="WHITE">
+            <JFXButton fx:id="btn_login" layoutX="86.0" layoutY="226.0" mnemonicParsing="false" onMouseClicked="#btn_login_signal" opacity="0.86" prefHeight="31.0" prefWidth="144.0" style="-fx-background-color: B52F2A; -fx-background-radius: 5cm;" text="Log in" textFill="WHITE">
                <font>
                   <Font name="Bodoni MT Italic" size="24.0" />
                </font>
             </JFXButton>
-            <Label fx:id="verif" layoutX="40.0" layoutY="175.0" prefHeight="24.0" prefWidth="235.0" />
+            <Label fx:id="verif" layoutX="1.0" layoutY="175.0" prefHeight="39.0" prefWidth="323.0" textFill="#eb0c0c">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font></Label>
             <JFXButton fx:id="forgotten" layoutX="69.0" layoutY="339.0" onAction="#forgotten_signal" prefHeight="31.0" prefWidth="177.0" style="-fx-underline: true; -fx-background-color: transparent;" text="forgot password?" />
             <JFXTextField fx:id="username" layoutX="55.0" layoutY="38.0" prefHeight="39.0" prefWidth="222.0" promptText="Username " unFocusColor="#252521" />
             <JFXPasswordField fx:id="pwd" layoutX="55.0" layoutY="129.0" prefHeight="26.0" prefWidth="222.0" promptText="password" unFocusColor="BLACK" />

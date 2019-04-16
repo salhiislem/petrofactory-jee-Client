@@ -87,7 +87,7 @@
                         <Insets left="25.0" top="20.0" />
                      </HBox.margin>
                   </ImageView>
-                   <Button fx:id="btnJobRequest" onAction="#switchJobRequest" prefHeight="42.0" prefWidth="139.0" style="-fx-cursor: hand; -fx-background-color: transparent;" styleClass="nav-button" text="Job Requests" textFill="#a1aec4">
+                   <Button fx:id="btnJobRequest" onAction="#switchJobRequest" prefHeight="42.0" prefWidth="139.0" style="-fx-cursor: hand; -fx-background-color: transparent;" styleClass="nav-button" text="Job Offers" textFill="#a1aec4">
                      <font>
                         <Font name="Ebrima Bold" size="17.0" />
                      </font>

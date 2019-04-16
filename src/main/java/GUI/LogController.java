@@ -57,14 +57,14 @@ public class LogController implements Initializable{
 		User.setConnectedUser(user);
 		if(user==null)
 		{
-			
+			verif.setText("username or/and password is not valid");
 		}
 		else if(user.getAccountState()==AccountState.NOTACTIVATED)
 		{
 			
 			String mesg="Your account activation code : " + user.getConfirmationToken();
 			 Emailer um=new Emailer();
-			//   um.SendEmail(user.getEmail(), "Account Activation", mesg);
+			   um.SendEmail(user.getEmail(), "Account Activation", mesg);
 			 
 			   FXMLLoader loader = new FXMLLoader(getClass().getResource("ConfirmationToken.fxml"));
 		          Parent root= loader.load();
@@ -78,7 +78,7 @@ public class LogController implements Initializable{
 		         stage.show();
 		         stage.setResizable(false);
 		          ConfirmationTokenController ccc = loader.getController();
-		          ccc.setUser(user);;
+		          ccc.setUser(user);
 		  		
 
 		         

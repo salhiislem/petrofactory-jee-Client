@@ -14,6 +14,8 @@ import persistence.User;
 import utils.Gender;
 
 import java.io.IOException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import Delegate.UserServiceDelegate;
 import javafx.event.ActionEvent;
@@ -66,9 +68,60 @@ public class SignUpController {
 	Stage stage= new Stage();
     Scene scene;
 	// Event Listener on Button[#ajouter].onAction
+    
 	@FXML
 	public void ajouter_utilisateur(ActionEvent event) throws IOException {
-		 if (!terms.isSelected()){
+		Pattern pattern = Pattern.compile("\\d{3}-\\d{8}");
+		Matcher matcher = pattern.matcher(numTel.getText());
+		
+		  if (firstname.getText().equals(""))
+	        {   erreur.setText("firstname is empty");  }
+		  else if(!firstname.getText().matches("[a-zA-Z]"))
+          {
+              erreur.setText("firstname is not valid");
+          }
+	         
+	         else if (lastname.getText().equals(""))
+	        {   erreur.setText("lastname is empty");  }
+		  
+	         else if(!lastname.getText().matches("[a-zA-Z]"))
+	          {
+	              erreur.setText("lastname is not valid");
+	          }
+	         
+	         else if (birthday.toString().equals(""))
+	        {   erreur.setText("birthday is empty");  }
+	         else if(male.isSelected()&&female.isSelected()){
+				erreur.setText("choose a valid gender");
+			}else if((!male.isSelected())&&(!female.isSelected())){
+				erreur.setText("gender is empty");
+			}
+			else if (address.getText().equals(""))
+	        {   erreur.setText("address is empty");  }
+			 
+			else if (!matcher.matches()) {
+			      erreur.setText("Phone Number is not  Valid");
+			 }
+	else if (username.getText().equals(""))
+	        {   erreur.setText("username is empty");  }
+		 else if (email.getText().isEmpty()){
+             erreur.setText("Please insert your Email");
+         }
+         else if (!email.getText().matches("[a-zA-Z0-9\\.]+@[a-zA-Z0-9\\-\\_\\.]+\\.[a-zA-Z0-9]{2}")){
+        	 erreur.setText("Incorrect Email");
+         }
+        
+         else if (password.getText().equals(""))
+        {   erreur.setText("password is empty");  }
+         
+         else if (repeat_password.getText().equals(""))
+        {   erreur.setText("repeat your password"); }
+         else if(!password.getText().equals(repeat_password.getText()))
+ 		{
+ 			erreur.setText("Check your password!");
+ 		}
+		 
+        else if (!terms.isSelected()){
 			 Parent root = FXMLLoader.load(getClass().getResource("Term.fxml"));
 	           
 	            Scene sc = new Scene(root);
@@ -78,14 +131,12 @@ public class SignUpController {
 	            terms.setSelected(true);
 		        }
 		
-		 else if(!password.getText().equals(repeat_password.getText()))
-		{
-			erreur.setText("Check your password!");
-		}
+		
 		else
 		{UserServiceDelegate us=new UserServiceDelegate();
 			User user=new User(firstname.getText(),lastname.getText(), java.sql.Date.valueOf(birthday.getValue()),username.getText(),password.getText(),email.getText(),numTel.getText(),address.getText());
-			if(female.isSelected()){
+		
+			 if(female.isSelected()){
 				user.setGender(Gender.FEMALE);
 				
 			}else if(male.isSelected()){
