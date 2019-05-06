@@ -1,0 +1,23 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+	<h:dataTable value="#{shopBean.shopList}" var="sho" border="1">
+		<h:column>
+			<f:facet name="header">
+				<h:outputText value="num shop" />
+			</f:facet>
+			<h:outputText value="#{sho.idShop}" />
+		</h:column>
+
+		<h:column>
+			<f:facet name="header">
+				<h:outputText value="num comande" />
+			</f:facet>
+			<h:outputText value="#{sho.nbredecomande}" />
+		</h:column>
+
+
+	</h:dataTable>
+</ui:composition>

@@ -1,0 +1,74 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core"
+   
+    xmlns:pf="http://jsf.playerfinder.net/components">
+ 
+<h:form>
+<h:panelGroup id="componentOptionsId" layout="block"
+    styleClass="componentOptions">
+    <h:outputText styleClass="Label"
+        value="Note: these options affect both component examples!" />
+    <br/>
+    <h:outputText value="Total Stars: "
+        style="padding-left: 10px; padding-right: 5px;" />
+    <h:inputText id="totalStarsInputId"
+        value=" {ratingTestBean.totalStars}" style="width: 50px;">
+        <f:ajax event="change" render="@form" />
+        <f:validateLongRange minimum = "1" maximum = "20" />
+    </h:inputText>
+    <h:outputText value="Step: "
+        style="padding-left: 10px; padding-right: 5px;" />
+    <h:inputText id="stepInputId"
+        value=" {ratingTestBean.step}" style="width: 50px;">
+        <f:ajax event="change" render="@form" />
+        <f:validateLongRange minimum = "1" maximum = "4" />
+    </h:inputText>
+    <h:outputText value="Disabled: "
+        style="padding-left: 10px; padding-right: 5px;" />
+    <h:selectBooleanCheckbox value=" {ratingTestBean.disabled}">
+        <f:ajax event="change" render="@form" />
+    </h:selectBooleanCheckbox>
+    <br/>
+    <h:messages layout="table" errorClass="errors"/>
+</h:panelGroup>
+ 
+<h:panelGroup id="componentsPresentationId"
+    layout="block" styleClass="componentsPresentation" >
+    <h:panelGrid columns="1" style="padding-bottom: 15px;">
+        <h:outputText value="Rating with AJAX Submit:" />
+        <h:panelGroup>
+            <pf:rating disabled=" {ratingTestBean.disabled}"
+                totalStars=" {ratingTestBean.totalStars}"
+                step=" {ratingTestBean.step}"
+                value=" {ratingTestBean.rating1}">
+                <f:ajax event="change"
+                    listener=" {ratingTestBean.rate}"
+                    render="@form" />
+            </pf:rating>
+            <h:outputText value="Rating: "
+                style="padding-left: 10px;" />
+            <h:outputText value=" {ratingTestBean.rating1}" />
+        </h:panelGroup>
+    </h:panelGrid>
+    <h:panelGrid columns="1"
+        style="border-top: 1px solid  C3BBB6; padding-top: 10px;">
+        <h:outputText value="Regular Rating Submit:" />
+        <h:panelGrid columns="1">
+            <h:panelGroup>
+                <pf:rating disabled=" {ratingTestBean.disabled}"
+                    totalStars=" {ratingTestBean.totalStars}"
+                    step=" {ratingTestBean.step}"
+                    value=" {ratingTestBean.rating2}" />
+                <h:outputText value="Rating: "
+                    style="padding-left: 10px;" />
+                <h:outputText value=" {ratingTestBean.rating2}" />
+            </h:panelGroup>
+            <h:commandButton type="submit" value="Submit scores!"
+                action=" {ratingTestBean.formSubmit()}" />
+        </h:panelGrid>
+    </h:panelGrid>
+</h:panelGroup>
+</h:form>
+</ui:composition>
